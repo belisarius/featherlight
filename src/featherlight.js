@@ -523,9 +523,7 @@
 						w  / parseInt(this.$content.parent().css('width'),10),
 						h / parseInt(this.$content.parent().css('height'),10));
 					/* Resize content */
-					if (ratio > 1) {
-						this.$content.css('width', '' + w / ratio + 'px').css('height', '' + h / ratio + 'px');
-					}
+					this.$content.css('width', '' + (w - 250 ) / ratio + 'px').css('height', '' + (h - 250) / ratio + 'px');
 				}
 				return _super(event);
 			},
